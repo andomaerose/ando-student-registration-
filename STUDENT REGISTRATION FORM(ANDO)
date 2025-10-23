@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: #800080; /* Purple background */
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #FFD700;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ffea00;
+    }
+
+    /* THANK YOU PAGE */
+    .thank-you {
+      text-align: center;
+      display: none;
+      color: #FFD700;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    /* When the form is submitted, hide the form and show thank-you message */
+    #thankyou:target .form-section {
+      display: none;
+    }
+
+    #thankyou:target .thank-you {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="thankyou">
+    <div class="form-section">
+      <h2>Student Registration</h2>
+      <form action="#thankyou">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+          <option value="">-- Select Course --</option>
+          <option>Information Technology</option>
+          <option>Business Administration</option>
+          <option>Engineering</option>
+          <option>Education</option>
+        </select>
+
+        <input type="submit" value="Register">
+      </form>
+    </div>
+
+    <div class="thank-you">
+      THANK YOU, KAMSAMNIDAAAA! 💜
+    </div>
+  </div>
+
+</body>
+</html>
